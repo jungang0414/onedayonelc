@@ -28,5 +28,6 @@ var minOperations = function (nums) {
         //最後將s 更新為的值 以處理下一組相同的數值
         s = e;
     }
+    //回傳 res 總操作次數
     return res;
 };
