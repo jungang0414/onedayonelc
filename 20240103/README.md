@@ -9,6 +9,6 @@ Anti-theft security devices are activated inside a bank. You are given a 0-index
 **Return the total number of laser beams in the bank.**
 
 Example:
-Input: bank = ["011001","000000","010100","001000"]
+    Input: bank = ["011001","000000","010100","001000"]
 
 # 定義 不同行之間 發射器及接收器所形成的激光束總數
