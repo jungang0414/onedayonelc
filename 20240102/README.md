@@ -8,12 +8,11 @@ You are given an integer array nums. You need to create a 2D array from nums sat
 
 Return the resulting array. If there are multiple answers, return any of them.
 
-**Note that the 2D array can have a different number of elements on each row.**
-
 Example: 
     Input: nums = [1, 3, 4, 1, 2, 3, 1];
     Output: [[1,3,4,2], [1,3], [1]]
-    
+
+**Note that the 2D array can have a different number of elements on each row.**
 
 # 定義 名為 findMatrix 的函數, 其功能是將依數字陣列轉換成一種特殊的矩陣格式。
 
