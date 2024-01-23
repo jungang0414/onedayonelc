@@ -13,14 +13,16 @@ var minOperations = function (nums) {
         while (e < nums.length && nums[e] === nums[s]) {
             e++
         }
+        console.log(e);
         //因為有事先排序 所以數值為1
         const count = e - s;
+        console.log(count)
         if (count === 1) {
             return -1;
         }
         //將count除以3 並且無條件捨去小數點加入到 res 上
         res += Math.floor(count / 3);
-
+        console.log(res)
         //當 count除以3有餘數的話 將 res + 1
         if (count % 3 !== 0) {
             res += 1;
@@ -31,3 +33,5 @@ var minOperations = function (nums) {
     //回傳 res 總操作次數
     return res;
 };
+
+minOperations(nums);
