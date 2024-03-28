@@ -1,11 +1,11 @@
-2631. Group By
+2958. Length of Longest Subarray With at Most K Frequency
 
-Write code that enhances all arrays such that you can call the array.groupBy(fn) method on any array and it will return a grouped version of the array.
+You are given an integer array nums and an integer k.
 
-A grouped array is an object where each key is the output of fn(arr[i]) and each value is an array containing all items in the original array with that key.
+The frequency of an element x is the number of times it occurs in an array.
 
-The provided callback fn will accept an item in the array and return a string key.
+An array is called good if the frequency of each element in this array is less than or equal to k.
 
-The order of each value list should be the order the items appear in the array. Any order of keys is acceptable.
+Return the length of the longest good subarray of nums.
 
-Please solve it without lodash's _.groupBy function.
+A subarray is a contiguous non-empty sequence of elements within an array.
