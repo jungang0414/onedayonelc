@@ -11,11 +11,15 @@ var isIsomorphic = function (s, t) {
     let objT = {};
     //遍歷字串放入集合
     for (let i = 0; i < s.length; i++) {
-        console.log(objS);
-        console.log(objT);
+        console.log(objS[s[i]]);
+        console.log(objT[t[i]]);
         if (objS[s[i]] !== objT[t[i]]) return false;
         objS[s[i]] = i;
         objT[t[i]] = i;
     }
     return true;
 };
+
+let s = "bbbaaaaxxx", t = "aaabbbbzzx";
+
+console.log(isIsomorphic(s, t));

@@ -3,8 +3,7 @@
  * @return {number[]}
  */
 
-// 將陣列映射 1.取反 2.增加偏移量
-var findDuplicates = function (nums) {
+const newLocal = function (nums) {
     let result = [];
     for (const num of nums) {
         if (nums[Math.abs(num) - 1] < 0) {
@@ -15,4 +14,3 @@ var findDuplicates = function (nums) {
     }
     return result;
 };
-

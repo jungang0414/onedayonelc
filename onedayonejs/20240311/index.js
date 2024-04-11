@@ -5,6 +5,7 @@ var customSortString = function(order, s) {
     for (const char of order) {
         charCount[char] = 0;
     }
+    console.log(charCount)
 
     for (const char of s) {
         if (charCount[char] !== undefined) {
@@ -25,3 +26,4 @@ var customSortString = function(order, s) {
     return sorted;
 };
 
+customSortString(order,s)

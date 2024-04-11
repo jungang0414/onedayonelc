@@ -1,24 +1,24 @@
-
-let nums = [1, 3, 2, 3, 3];
-
-var countSubarrays = function(nums, k) {
-    let max_Element = Math.max(...nums);
-    let result = 0;
-    let left = 0;
-    let right = 0;
-    const n = nums.length;
-
-    while (right < n) {
-        k -= nums[right] === max_Element ? 1 : 0;
-        right++;
-        while (k === 0) {
-            k += nums[left] === max_Element ? 1 : 0;
-            left++;
+/**
+ * @param {Array<Function>} functions
+ * @return {Promise<any>}
+ */
+var promiseAll = function(functions) {
+    return new Promise((resolve, reject) => {
+        const results = [];
+        let count = 0;
+        for (let i = 0; i < functions.length; i++) {
+            functions[i]()
+            .then(result => {
+                results[i] = result;
+                count++;
+                if (count === functions.length) {
+                    resolve(results);
+                }
+            })
+            .catch(error => {
+                console.log(`錯誤發生: ${error}`);
+                reject(error);
+            });
         }
-        result += left;
-    }
-    return result;
+    });
 };
-
-
-console.log(countSubarrays(nums, 2))

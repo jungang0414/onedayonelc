@@ -1,27 +1,21 @@
-var bagOfTokensScore = function (tokens, power) {
-    //降冪排序tokens
-    tokens.sort((a, b) => a - b);
-    console.log(tokens)
-    let score = 0,
-        maxScore = 0,
-        left = 0,
-        right = tokens.length - 1;
+let tokens = [50, 120, 60];
+let power = 120;
 
-    //判斷tokens大小
-    while (left <= right) {
-        if (power >= tokens[left]) {
-            power -= tokens[left];
+var bagOfTokensScore = function (tokens, power) {
+    tokens.sort((a,b) => a - b);
+    let score = 0, maxScore = 0;
+
+    for (let i = 0; i < tokens.length; i++) {
+        if (power >= tokens[i]) {
             score++;
-            left++;
             maxScore = Math.max(maxScore, score);
         } else if (score > 0) {
-            power += tokens[right];
+            power += tokens[i];
             score--;
-            right--;
         } else {
             break;
         }
     }
-
+    
     return maxScore;
 };
